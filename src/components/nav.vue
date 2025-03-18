@@ -1,0 +1,55 @@
+<script>
+export default{
+    props: ['user'],
+
+    methods:{
+        logout(){
+            this.$router.push('/')
+        }
+    }
+}
+</script>
+<template>
+    <nav class="flex bg-red-50 bg-opacity-40 items-center relative justify-between  px-4 py-2 w-full border-b-4 border-opacity-30 shadow-sm border-brownish-light">
+  <div class="flex">
+    <img src="https://img.icons8.com/glyph-neue/64/000000/restaurant-building.png"/>
+    <div class="flex">
+        <p class="font-mono px-2 font-semibold text-gray-600 py-6 text-lg">Feast-Hub</p>
+        
+    </div>
+ </div>
+
+  <div class="flex font-mono">
+
+    <img class="object-cover w-10 h-10 rounded-full" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&h=764&q=100" alt="">
+     <div class="px-1.5">
+        <div class="text-sm"><span class="font-semibold text-gray-600">Welcome, </span><span class=" font-bold text-base text-gray-700">{{this.user}}</span></div>
+        <div class="text-xs font-medium text-gray-700">{{ new Date().toDateString() }}</div>
+     </div>
+
+     <div class=" px-2.5 py-0.5 border-l-2 border-brownish-red-dark border-spacing-6 border-opacity-40">
+        <div class="flex">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-brownish-red" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+            </span>
+            <span @click="logout" class="text-brownish-red-dark hover:text-brownish-red hover:underline cursor-pointer text-sm font-semibold ml-0.5"> Logout </span>
+         </div>
+         <div class="flex">
+            <span>
+                <svg  class="h-5 w-5 fill-current text-brownish-red" fill="#000000" width="800px" height="800px" viewBox="0 0 64 64" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+                    <g id="ICON"><path d="M10,15l-4,0c-0.796,0 -1.559,0.316 -2.121,0.879c-0.563,0.562 -0.879,1.325 -0.879,2.121c-0,2.509 -0,7.081 -0,12c-0,0.552 0.448,1 1,1c0.552,0 1,-0.448 1,-1l-0,-12c-0,-0.265 0.105,-0.52 0.293,-0.707c0.187,-0.188 0.442,-0.293 0.707,-0.293l4,0l-0,21c0,1.657 1.343,3 3,3l39,-0c0.796,-0 1.559,-0.316 2.121,-0.879c0.563,-0.562 0.879,-1.325 0.879,-2.121c0,-3.172 0,-9 0,-9c0,-0.552 -0.448,-1 -1,-1c-0.552,-0 -1,0.448 -1,1l-0,9c0,0.265 -0.105,0.52 -0.293,0.707c-0.187,0.188 -0.442,0.293 -0.707,0.293c-0,-0 -39,0 -39,0c-0.552,-0 -1,-0.448 -1,-1c-0,-0 0,-32 0,-32c0,-0.552 0.448,-1 1,-1c0,0 39,-0 39,-0c0.552,0 1,0.448 1,1c0,0 0,19 0,19c0,0.552 0.448,1 1,1c0.552,-0 1,-0.448 1,-1l0,-8l3,-0c0.265,0 0.52,0.105 0.707,0.293c0.188,0.187 0.293,0.442 0.293,0.707l-0,25l-54,0l-0,-9c-0,-0.552 -0.448,-1 -1,-1c-0.552,-0 -1,0.448 -1,1c-0,5.651 -0,11.154 -0,14c-0,0.796 0.316,1.559 0.879,2.121c0.562,0.563 1.325,0.879 2.121,0.879l4,0c0.552,0 1,-0.448 1,-1c-0,-0.552 -0.448,-1 -1,-1l-4,0c-0.265,-0 -0.52,-0.105 -0.707,-0.293c-0.188,-0.187 -0.293,-0.442 -0.293,-0.707l-0,-3l54,0l-0,3c0,0.265 -0.105,0.52 -0.293,0.707c-0.187,0.188 -0.442,0.293 -0.707,0.293l-44,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l12.606,0c-0.16,2.682 -0.855,6.147 -3.417,8l-1.689,0c-0.552,-0 -1,0.448 -1,1c-0,0.552 0.448,1 1,1l21,0c0.552,-0 1,-0.448 1,-1c-0,-0.552 -0.448,-1 -1,-1l-1.689,0c-2.562,-1.854 -3.257,-5.318 -3.417,-8l20.606,0c0.796,-0 1.559,-0.316 2.121,-0.879c0.563,-0.562 0.879,-1.325 0.879,-2.121c-0,-6.028 -0,-23.972 -0,-30c0,-0.796 -0.316,-1.559 -0.879,-2.121c-0.562,-0.563 -1.325,-0.879 -2.121,-0.879l-3,-0l0,-9c-0,-1.657 -1.343,-3 -3,-3l-39,0c-1.657,0 -3,1.343 -3,3l0,9Zm25.394,36l-6.788,0c-0.155,2.531 -0.785,5.68 -2.585,8l11.958,0c-1.8,-2.32 -2.43,-5.47 -2.585,-8Zm-5.962,-19l-0.932,0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1l0.182,0l-0.618,1.649c-0.194,0.517 0.068,1.094 0.585,1.287c0.517,0.194 1.094,-0.068 1.287,-0.585l0.882,-2.351l2.364,0l0.882,2.351c0.193,0.517 0.77,0.779 1.287,0.585c0.517,-0.193 0.779,-0.77 0.585,-1.287l-0.618,-1.649l0.182,0c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1l-0.932,0l-1.632,-4.351c-0.146,-0.39 -0.519,-0.649 -0.936,-0.649c-0.417,-0 -0.79,0.259 -0.936,0.649l-1.632,4.351Zm2.136,0l0.864,0l-0.432,-1.152l-0.432,1.152Zm-16.275,-10.293l2,2c0.39,0.391 1.024,0.391 1.414,0l3.967,-3.966c0.39,-0.391 0.39,-1.024 -0,-1.415c-0.391,-0.39 -1.024,-0.39 -1.415,0l-3.259,3.26c0,-0 -1.293,-1.293 -1.293,-1.293c-0.39,-0.39 -1.024,-0.39 -1.414,-0c-0.39,0.39 -0.39,1.024 -0,1.414Zm11.707,2.293l14,-0c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1l-14,-0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1Zm-0,-4l21,-0c0.552,-0 1,-0.448 1,-1c-0,-0.552 -0.448,-1 -1,-1l-21,-0c-0.552,-0 -1,0.448 -1,1c-0,0.552 0.448,1 1,1Zm0,-6l14,-0c0.552,0 1,-0.448 1,-1c0,-0.552 -0.448,-1 -1,-1l-14,-0c-0.552,0 -1,0.448 -1,1c0,0.552 0.448,1 1,1Zm-11.707,-2.293l2,2c0.39,0.391 1.024,0.391 1.414,0l3.967,-3.966c0.39,-0.391 0.39,-1.024 -0,-1.415c-0.391,-0.39 -1.024,-0.39 -1.415,0l-3.259,3.26c0,-0 -1.293,-1.293 -1.293,-1.293c-0.39,-0.39 -1.024,-0.39 -1.414,-0c-0.39,0.39 -0.39,1.024 -0,1.414Zm11.707,-1.707l21,-0c0.552,-0 1,-0.448 1,-1c-0,-0.552 -0.448,-1 -1,-1l-21,-0c-0.552,-0 -1,0.448 -1,1c-0,0.552 0.448,1 1,1Z"/></g>
+
+                    </svg>
+            </span>
+            <span @click="logout" class="text-brownish-red-dark hover:text-brownish-red hover:underline text-sm cursor-pointer font-semibold ml-0.5"> Test Case </span>
+         </div>
+    </div>
+  </div>
+</nav>
+</template>
+<style scoped>
+
+</style>
