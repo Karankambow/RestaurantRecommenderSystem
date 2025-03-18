@@ -29,6 +29,6 @@ npm run build
 ```
 # RestaurantRecommenderSystem
 
-Project demo hosted on the url given below
+Project demo hosted on this url -->
 https://karankambow.github.io/RestaurantRecommenderSystem/
 
